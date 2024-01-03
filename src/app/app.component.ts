@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {TaskComponent} from "./task/task.component";
+import { TaskComponent } from "./task/task.component";
+import storage from "../data/localStorage"
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,5 @@ import {TaskComponent} from "./task/task.component";
 })
 export class AppComponent {
   title = 'todolist';
+  protected readonly storage = storage;
 }
