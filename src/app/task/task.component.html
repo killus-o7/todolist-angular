@@ -1,8 +1,11 @@
-<div *ngIf="task">
-  <h3></h3>
+<div id="taskDiv" >
+  <h3>{{task.name}}</h3>
+  <p>{{task.desc}}</p>
+  <h1>{{task.date}}</h1>
+  <div id="buttons">
+    <button (click)="toggle()" id="toggle_btn" [ngClass]="status ? 'done' : ''">zrobione</button>
+    <button (click)="delete()" id="delete_btn">usuń zadanie</button>
+  </div>
 </div>
 
-<div *ngIf="!task">
-  Sory mordo nie ma diva :<
-</div>
 

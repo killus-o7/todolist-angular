@@ -1,1 +1,14 @@
-<app-task [task]="storage.data[0]" />
+<header>
+  Twoja lista zadań <3
+</header>
+
+<app-form />
+<div class="tasks-container">
+  <app-task *ngFor="let x of storage.data; index as i" [task]="x" [idx]="i"/>
+  <div *ngIf="storage.data.length == 0">
+    Nie dodano żadnego zadania !
+  </div>
+</div>
+
+
+
